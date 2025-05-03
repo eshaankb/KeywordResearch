@@ -1,10 +1,15 @@
 import click
-import pandas as pd
+from keywordresearch.utils import read_file
+from typing import TextIO
 
 @click.command()
-@click.argument("maining")
-def main(maining):
-    click.echo(f"this cli is {maining} made by click")
+@click.argument('input_file', type=click.File('r'))
+def main(input_file : TextIO):
+    print(type(input_file))
+    df = read_file(input_file)
+    print(f"there are {len(df)} rows")
+    
+
 
 if __name__ == "__main__":
     main()
