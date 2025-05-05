@@ -2,6 +2,7 @@ import pandas as pd
 import os
 from typing import TextIO
 
+
 def read_file(file_io):
     file_name = file_io.name
     _, ext = os.path.splitext(file_name)

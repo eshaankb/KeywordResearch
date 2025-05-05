@@ -1,2 +1,4 @@
 click
 pandas
+spacy
+scikit-learn
